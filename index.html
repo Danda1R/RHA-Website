@@ -39,15 +39,98 @@
       </ul>
     </nav>
 
-    <p>Welcome Home!</p>
+    <header>
+      <h1>Welcome Home!</h1>
+    </header>
+
+    <header>
+      <h2>Latest Events:</h2>
+    </header>
+
+    <div class="row">
+      <div class="column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_1.jpeg"
+          style="width: 100%"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_2.jpeg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_3.jpeg"
+          style="width: 100%"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_4.jpeg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_5.jpeg"
+          style="width: 100%"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_6.jpeg"
+          style="width: 100%"
+        />
+      </div>
+      <div class="column">
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_7.jpeg"
+          style="width: 100%"
+        />
+        <img
+          class="myImages"
+          id="myImg"
+          src="image/RHA_Spring_Gala_8.jpeg"
+          style="width: 100%"
+        />
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
 
     <script>
-      const logo = document.querySelector("#logo");
+      var modal = document.getElementById("myModal");
+      var images = document.getElementsByClassName("myImages");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
 
-      // Adding reaction when image is clicked
-      logo.addEventListener("click", () => {
-        //alert('RHA says "Welcome!"');
-      });
+      for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        img.onclick = function (evt) {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        };
+      }
+
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
     </script>
   </body>
 </html>
