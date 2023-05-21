@@ -6,13 +6,10 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <title>Residence Hall Association</title>
-    <script
-      type="module"
-      src="https://unpkg.com/@nocodeapi/embed-instagram-feed@latest/embed-instagram-feed.js?module"
-    ></script>
   </head>
 
   <body>
+    <!--
     <a href="">
       <img
         id="logo"
@@ -21,52 +18,30 @@
         class="center"
       />
     </a>
-
-    <nav class="nav">
-      <ul>
-        <li><a href=""> Home </a></li>
-        <li><a href="./events/index.html"> Events </a></li>
-        <li>
-          <a href=""> Members </a>
-          <ul>
-            <li><a href="members/eboard/index.html">E-Board</a></li>
-            <li><a href="members/hallcouncil/index.html">Hall Council</a></li>
-            <li><a href="#">Residents</a></li>
-          </ul>
-        </li>
-        <li><a href="#"> Gallery </a></li>
-        <li><a href="#"> Documents </a></li>
-        <li><a href="#"> Contact </a></li>
-      </ul>
-    </nav>
-
+    -->
     <header>
-      <h1>Welcome Home!</h1>
+      <a href="#"><img src="./image/RHA_Logo.png" /></a>
+      <nav class="navbar">
+        <ul>
+          <li><a href=""> Home </a></li>
+          <li><a href="./events/index.html"> Events </a></li>
+          <li>
+            <a href=""> Members </a>
+            <ul>
+              <li><a href="members/eboard/index.html">E-Board</a></li>
+              <li><a href="members/hallcouncil/index.html">Hall Council</a></li>
+              <li><a href="#">Residents</a></li>
+            </ul>
+          </li>
+          <li><a href="#"> Gallery </a></li>
+          <li><a href="#"> Documents </a></li>
+          <li><a href="#"> Contact </a></li>
+        </ul>
+      </nav>
     </header>
 
-    <embed-instagram-feed
-      url="https://v1.nocodeapi.com/rrd42/instagram/dBbIkNkVwNjgsJmh?limit=4"
-    ></embed-instagram-feed>
-
-    <script>
-      var modal = document.getElementById("myModal");
-      var images = document.getElementsByClassName("myImages");
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-
-      for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        img.onclick = function (evt) {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = this.alt;
-        };
-      }
-
-      var span = document.getElementsByClassName("close")[0];
-      span.onclick = function () {
-        modal.style.display = "none";
-      };
-    </script>
+    <main>
+      <p>Welcome Home! How Can We Help?</p>
+    </main>
   </body>
 </html>
