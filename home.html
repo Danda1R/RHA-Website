@@ -1,0 +1,82 @@
+<body class="holy-grail">
+  <header class="main-header">HEADER CONTENT</header>
+
+  <div class="holy-grail-body">
+    <section class="holy-grail-content">MAIN CONTENT</section>
+
+    <div class="holy-grail-sidebar-left hg-sidebar">LH SIDEBAR</div>
+
+    <div class="holy-grail-sidebar-right hg-sidebar">RH SIDEBAR</div>
+  </div>
+
+  <footer class="main-footer">FOOTER CONTENT</footer>
+</body>
+
+<style>
+  body {
+    width: 100%;
+    margin: 0px;
+    background-color: lightblue;
+    font-size: 22pt;
+    overflow: hidden;
+  }
+
+  .main-header {
+    background-color: pink;
+  }
+
+  .main-footer {
+    background-color: yellow;
+  }
+
+  .holy-grail {
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .holy-grail,
+  .holy-grail-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+  .holy-grail-content {
+    flex: 1 1 auto;
+  }
+
+  .holy-grail-sidebar-right {
+    order: 1;
+    background-color: gray;
+    max-width: 4%;
+  }
+
+  .holy-grail-sidebar-left {
+    order: -1;
+    background-color: gray;
+    max-width: 4%;
+  }
+
+  @media (min-width: 786px) {
+    .holy-grail-body {
+      flex-direction: row;
+    }
+
+    .hg-sidebar {
+      flex: 0 0 260px;
+    }
+  }
+
+  @media (max-width: 786px) {
+    .holy-grail-body {
+      flex-direction: row;
+    }
+
+    .holy-grail-sidebar-left,
+    .holy-grail-sidebar-right {
+      flex: 0 0 260px;
+      background-color: blue;
+      max-width: 0%;
+    }
+  }
+</style>
